@@ -26,6 +26,8 @@ class TownsController < ApplicationController
   def new
     @town = Town.new
 
+	3.times {@town.attractions.build}
+	
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @town }

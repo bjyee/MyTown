@@ -1,6 +1,6 @@
 class Attraction < ActiveRecord::Base
 
-	belongs_to :town
+	belongs_to :towns
 	
 	scope :all, order('name')
 end
