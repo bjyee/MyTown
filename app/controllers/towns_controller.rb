@@ -14,7 +14,8 @@ class TownsController < ApplicationController
   # GET /towns/1.xml
   def show
     @town = Town.find(params[:id])
-
+	@attraction = @town.attractions.all
+	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @town }

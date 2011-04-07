@@ -25,6 +25,15 @@
   <%= @town.lon %>
 </p>
 
+<p>
+<b>Attractions in <%= @town.name %>:</b>
+	<ol>
+		<% for attraction in @attraction %>
+			<li><%= attraction.name %> - <%= attraction.street %></li>
+		<% end %>
+	</ol>
+</p>
+
 
 <%= link_to 'Edit', edit_town_path(@town) %> |
 <%= link_to 'Back', towns_path %>

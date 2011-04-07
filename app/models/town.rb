@@ -6,6 +6,6 @@ class Town < ActiveRecord::Base
 
 	scope :all, order('name')
 	
-	accepts_nested_attributes_for :attactions, :reject_if => lambda { |attraction| attraction[:name].blank? }
+	accepts_nested_attributes_for :attractions, :reject_if => lambda { |attraction| attraction[:name].blank? }
 	
 end
